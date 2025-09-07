@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partnerships – Les Éditions du Schabel Canada</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary-color:#1e3a8a;--secondary-color:#f59e0b;--text-dark:#374151;--text-light:#6b7280}
+    body{font-family:'Inter',sans-serif;color:var(--text-dark)}
+    .font-display{font-family:'Playfair Display',serif}
+    .navbar{background:rgba(255,255,255,.95)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .partner-card{background:#fff;padding:2rem;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,.08);text-align:center;height:100%}
+    .prose{max-width:70ch;margin:0 auto}
+    .prose ul{padding-left:1.2rem}
+  </style>
+</head>
+<body>
+  <div class="language-toggle position-fixed" style="top:80px;right:20px;z-index:1000;">
+    <button class="btn btn-sm btn-outline-primary me-2" onclick="switchLanguage('en')" id="btn-en">EN</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="font-display mb-3" data-en="Our Strategic Partnerships" data-fr="Nos Partenariats Stratégiques">Our Strategic Partnerships</h1>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4"><div class="partner-card"><i class="fas fa-university text-primary mb-3" style="font-size:3rem"></i><h5 data-en="Northwestern University" data-fr="Université Northwestern">Northwestern University</h5><p data-en="Buffett Institute for Global Affairs" data-fr="Institut Buffett pour les Affaires Mondiales">Buffett Institute for Global Affairs</p></div></div>
+        <div class="col-lg-4"><div class="partner-card"><i class="fas fa-book text-primary mb-3" style="font-size:3rem"></i><h5 data-en="Les Éditions du Schabel" data-fr="Les Éditions du Schabel">Les Éditions du Schabel</h5><p data-en="Cameroon - Our sister publishing house" data-fr="Cameroun - Notre maison sœur">Cameroon - Our sister publishing house</p></div></div>
+        <div class="col-lg-4"><div class="partner-card"><i class="fas fa-rocket text-primary mb-3" style="font-size:3rem"></i><h5 data-en="EK Catalyst Global" data-fr="EK Catalyst Global">EK Catalyst Global</h5><p data-en="Solutions Inc. - Strategic support" data-fr="Solutions Inc. - Soutien stratégique">Solutions Inc. - Strategic support</p></div></div>
+      </div>
+      <div class="row mt-5"><div class="col-lg-10 mx-auto">
+        <h3 class="font-display text-center mb-3" data-en="The Impact of Our Partnerships" data-fr="L’impact de nos partenariats">The Impact of Our Partnerships</h3>
+        <div class="prose lang-en">
+          <ul>
+            <li><strong>Unparalleled academic rigor</strong> – Methodologically sound works recognized in academic circles.</li>
+            <li><strong>Editorial credibility across two continents</strong> – Authentic African foundation with Canadian recognition.</li>
+            <li><strong>Structured global dissemination</strong> – Presence in Africa, North America, and access to Europe.</li>
+            <li><strong>A trusted ecosystem</strong> – Funding, translation opportunities, conferences, and global debates.</li>
+          </ul>
+        </div>
+        <div class="prose lang-fr" style="display:none;">
+          <ul>
+            <li><strong>Une rigueur académique inégalée</strong> – Des ouvrages méthodologiquement solides et reconnus.</li>
+            <li><strong>Une crédibilité éditoriale sur deux continents</strong> – Ancrage africain authentique et reconnaissance canadienne.</li>
+            <li><strong>Une diffusion mondiale structurée</strong> – Présence en Afrique, en Amérique du Nord et accès à l’Europe.</li>
+            <li><strong>Un écosystème de confiance</strong> – Financements, traductions, conférences et débats internationaux.</li>
+          </ul>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+      <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let currentLanguage='en';
+    function switchLanguage(lang){
+      currentLanguage=lang;
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.querySelectorAll('.lang-en').forEach(el=>el.style.display=(lang==='en')?'':'none');
+      document.querySelectorAll('.lang-fr').forEach(el=>el.style.display=(lang==='fr')?'':'none');
+      document.documentElement.lang=lang;
+    }
+    document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Les Éditions du Schabel Canada</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary-color:#1e3a8a;--secondary-color:#f59e0b;--text-dark:#374151;--text-light:#6b7280}
+    body{font-family:'Inter',sans-serif;color:var(--text-dark)}
+    .font-display{font-family:'Playfair Display',serif}
+    .navbar{background:rgba(255,255,255,.95)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .contact-section{background:radial-gradient(1200px 400px at 50% -200px, rgba(30,58,138,.08), transparent), #f8fafc}
+    .contact-panel{background:#fff;border:1px solid rgba(0,0,0,.06)}
+  </style>
+</head>
+<body>
+  <div class="language-toggle position-fixed" style="top:80px;right:20px;z-index:1000;">
+    <button class="btn btn-sm btn-outline-primary me-2" onclick="switchLanguage('en')" id="btn-en">EN</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="contact" class="bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="font-display fw-bold mb-4" data-translate="contact-title">Contact & Submission</h2>
+                <p class="lead" data-translate="contact-subtitle">Ready to publish with Les Éditions du Schabel Canada? We welcome your projects with seriousness, professionalism, and passion. Submit a manuscript or get in touch with us.</p>
+                
+                <form id="contact-form" class="mt-5">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control rounded-pill" id="contact-name" placeholder="Your Name" data-translate="contact-name-placeholder">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control rounded-pill" id="contact-email" placeholder="Your Email" data-translate="contact-email-placeholder">
+                        </div>
+                        <div class="col-12">
+                            <select class="form-select rounded-pill" id="contact-subject" data-translate="contact-subject-placeholder">
+                                <option value="" disabled selected data-translate="select-option-placeholder">Select an option...</option>
+                                <option value="manuscript" data-translate="contact-option-manuscript">Manuscript Submissions</option>
+                                <option value="general" data-translate="contact-option-general">General Inquiries</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control rounded-3" id="contact-message" rows="5" placeholder="Your Message" data-translate="contact-message-placeholder"></textarea>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill" data-translate="contact-button">Submit a Manuscript</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="form-status" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+      <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let currentLanguage='en';
+    function switchLanguage(lang){
+      currentLanguage=lang;
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.querySelectorAll('[data-en],[data-fr]').forEach(el=>{
+        const key= lang==='en'? el.getAttribute('data-en'): el.getAttribute('data-fr');
+        if(key) el.textContent = key;
+      });
+      document.documentElement.lang=lang;
+    }
+    document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+  </script>
+</body>
+</html>
+

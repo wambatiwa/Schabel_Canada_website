@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services – Les Éditions du Schabel Canada</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary-color:#1e3a8a;--secondary-color:#f59e0b;--text-dark:#374151;--text-light:#6b7280}
+    body{font-family:'Inter',sans-serif;color:var(--text-dark)}
+    .font-display{font-family:'Playfair Display',serif}
+    .navbar{background:rgba(255,255,255,.95)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .service-card{background:#fff;padding:1.5rem;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.06);height:100%;border:1px solid rgba(0,0,0,.06)}
+    .service-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem}
+    .service-badge{background:var(--primary-color);color:#fff;border-radius:999px;padding:.25rem .6rem;font-weight:600;font-size:.8rem}
+    .service-icon{font-size:1.5rem;color:var(--secondary-color)}
+    .service-title{margin:0;font-size:1.1rem;font-weight:700}
+    .service-tagline{color:var(--text-light);margin-bottom:.75rem}
+    .prose ul{padding-left:1.2rem;text-align:left}
+    .toc-pills .nav-link{border:1px solid rgba(0,0,0,.08);border-radius:999px;margin:.25rem;padding:.4rem .9rem}
+    .toc-pills .nav-link.active{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}
+  </style>
+</head>
+<body>
+  <div class="language-toggle position-fixed" style="top:80px;right:20px;z-index:1000;">
+    <button class="btn btn-sm btn-outline-primary me-2" onclick="switchLanguage('en')" id="btn-en">EN</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="font-display mb-3" data-en="Our Editorial Services" data-fr="Nos Services Éditoriaux">Our Editorial Services</h1>
+      <p class="mb-0" data-en="Complete support from idea to worldwide distribution" data-fr="Un accompagnement complet de l’idée à la diffusion mondiale">Complete support from idea to worldwide distribution</p>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="d-inline-flex flex-wrap justify-content-center toc-pills">
+          <a href="#svc-1" class="nav-link active" data-en="Review" data-fr="Évaluation">Review</a>
+          <a href="#svc-2" class="nav-link" data-en="Editing" data-fr="Révision">Editing</a>
+          <a href="#svc-3" class="nav-link" data-en="Translation" data-fr="Traduction">Translation</a>
+          <a href="#svc-4" class="nav-link" data-en="Layout" data-fr="Mise en page">Layout</a>
+          <a href="#svc-5" class="nav-link" data-en="Cover" data-fr="Couverture">Cover</a>
+          <a href="#svc-6" class="nav-link" data-en="ISBN" data-fr="ISBN">ISBN</a>
+          <a href="#svc-7" class="nav-link" data-en="Printing" data-fr="Impression">Printing</a>
+          <a href="#svc-8" class="nav-link" data-en="Promotion" data-fr="Promotion">Promotion</a>
+          <a href="#svc-9" class="nav-link" data-en="Co‑Publishing" data-fr="Co‑édition">Co‑Publishing</a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6" id="svc-1"><div class="service-card"><div class="service-header"><span class="service-badge">1</span><i class="fas fa-search service-icon"></i><h5 class="service-title"><span data-en="Manuscript Review & Evaluation" data-fr="Lecture et évaluation de manuscrits">Manuscript Review & Evaluation</span></h5></div><p class="service-tagline lang-en">In‑depth analysis with a clear editorial report</p><p class="service-tagline lang-fr" style="display:none;">Analyse approfondie et rapport éditorial clair</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc1" data-en="Details" data-fr="Détails">Details</button><div id="svc1" class="collapse mt-3"><div class="prose lang-en"><ul><li>In‑depth analysis (style, structure, relevance)</li><li>Editorial report with recommendations</li><li>Strategic improvement axes</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Analyse approfondie (style, structure, pertinence)</li><li>Rapport critique et recommandations</li><li>Axes d’amélioration</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-2"><div class="service-card"><div class="service-header"><span class="service-badge">2</span><i class="fas fa-edit service-icon"></i><h5 class="service-title"><span data-en="Language Editing & Stylistic Revision" data-fr="Correction linguistique et révision stylistique">Language Editing & Stylistic Revision</span></h5></div><p class="service-tagline lang-en">FR/EN grammar, spelling, typography and style</p><p class="service-tagline lang-fr" style="display:none;">FR/EN grammaire, orthographe, typographie et style</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc2" data-en="Details" data-fr="Détails">Details</button><div id="svc2" class="collapse mt-3"><div class="prose lang-en"><ul><li>Grammar, spelling, typography (FR/EN)</li><li>Stylistic revision</li><li>Academic proofreading</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Correction grammaticale, orthographique, typographique (FR/EN)</li><li>Révision stylistique</li><li>Relecture académique</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-3"><div class="service-card"><div class="service-header"><span class="service-badge">3</span><i class="fas fa-language service-icon"></i><h5 class="service-title"><span data-en="Translation & Cultural Adaptation" data-fr="Traduction et adaptation culturelle">Translation & Cultural Adaptation</span></h5></div><p class="service-tagline lang-en">Professional FR ↔ EN translation and localization</p><p class="service-tagline lang-fr" style="display:none;">Traduction FR ↔ EN professionnelle et localisation</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc3" data-en="Details" data-fr="Détails">Details</button><div id="svc3" class="collapse mt-3"><div class="prose lang-en"><ul><li>French ↔ English</li><li>Cultural localization</li><li>Cross‑revisions</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Français ↔ Anglais</li><li>Localisation culturelle</li><li>Révisions croisées</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-4"><div class="service-card"><div class="service-header"><span class="service-badge">4</span><i class="fas fa-file-alt service-icon"></i><h5 class="service-title"><span data-en="Interior Layout & Design" data-fr="Mise en page et design intérieur">Interior Layout & Design</span></h5></div><p class="service-tagline lang-en">Professional layouts for print and digital</p><p class="service-tagline lang-fr" style="display:none;">Mises en page professionnelles papier et numérique</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc4" data-en="Details" data-fr="Détails">Details</button><div id="svc4" class="collapse mt-3"><div class="prose lang-en"><ul><li>Print and digital formats</li><li>Typography and visuals</li><li>International standards</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Formats papier et numérique</li><li>Typographie et visuels</li><li>Standards internationaux</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-5"><div class="service-card"><div class="service-header"><span class="service-badge">5</span><i class="fas fa-image service-icon"></i><h5 class="service-title"><span data-en="Cover Design" data-fr="Création de couvertures">Cover Design</span></h5></div><p class="service-tagline lang-en">Modern, impactful covers that sell</p><p class="service-tagline lang-fr" style="display:none;">Des couvertures modernes et percutantes</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc5" data-en="Details" data-fr="Détails">Details</button><div id="svc5" class="collapse mt-3"><div class="prose lang-en"><ul><li>Modern, impactful designs</li><li>Professional designers</li><li>Multiple concepts</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Designs modernes et attractifs</li><li>Graphistes professionnels</li><li>Plusieurs concepts</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-6"><div class="service-card"><div class="service-header"><span class="service-badge">6</span><i class="fas fa-barcode service-icon"></i><h5 class="service-title"><span data-en="ISBN & Legal Deposit" data-fr="ISBN et dépôt légal">ISBN & Legal Deposit</span></h5></div><p class="service-tagline lang-en">Official Canadian ISBN and deposit</p><p class="service-tagline lang-fr" style="display:none;">ISBN canadien et dépôt légal</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc6" data-en="Details" data-fr="Détails">Details</button><div id="svc6" class="collapse mt-3"><div class="prose lang-en"><ul><li>Canadian ISBN</li><li>Library and Archives Canada</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>ISBN canadien</li><li>Bibliothèque et Archives Canada</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-7"><div class="service-card"><div class="service-header"><span class="service-badge">7</span><i class="fas fa-print service-icon"></i><h5 class="service-title"><span data-en="Printing & Distribution" data-fr="Impression et distribution">Printing & Distribution</span></h5></div><p class="service-tagline lang-en">Flexible runs, Canada & international</p><p class="service-tagline lang-fr" style="display:none;">Tirages flexibles, Canada & international</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc7" data-en="Details" data-fr="Détails">Details</button><div id="svc7" class="collapse mt-3"><div class="prose lang-en"><ul><li>Short/medium runs</li><li>Canada & International</li><li>Digital and print</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Tirages flexibles</li><li>Canada & International</li><li>Numérique et papier</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-8"><div class="service-card"><div class="service-header"><span class="service-badge">8</span><i class="fas fa-bullhorn service-icon"></i><h5 class="service-title"><span data-en="Promotion & Communication" data-fr="Promotion et communication">Promotion & Communication</span></h5></div><p class="service-tagline lang-en">Marketing plans, launches and press</p><p class="service-tagline lang-fr" style="display:none;">Plans marketing, lancements et presse</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc8" data-en="Details" data-fr="Détails">Details</button><div id="svc8" class="collapse mt-3"><div class="prose lang-en"><ul><li>Marketing plans</li><li>Launches & signings</li><li>Press kits</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Plans marketing</li><li>Lancements & dédicaces</li><li>Kits médias</li></ul></div></div></div></div>
+        <div class="col-lg-6" id="svc-9"><div class="service-card"><div class="service-header"><span class="service-badge">9</span><i class="fas fa-users service-icon"></i><h5 class="service-title"><span data-en="Academic & Institutional Co-Publishing" data-fr="Co Éditions académiques et institutionnelles">Academic & Institutional Co-Publishing</span></h5></div><p class="service-tagline lang-en">Partner with universities and institutions</p><p class="service-tagline lang-fr" style="display:none;">Partenariats universitaires et institutionnels</p><button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#svc9" data-en="Details" data-fr="Détails">Details</button><div id="svc9" class="collapse mt-3"><div class="prose lang-en"><ul><li>University partnerships</li><li>Bilingual publications</li><li>Global academic networks</li></ul></div><div class="prose lang-fr" style="display:none;"><ul><li>Partenariats universitaires</li><li>Publications bilingues</li><li>Réseaux académiques mondiaux</li></ul></div></div></div></div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="contact.html" class="btn btn-primary btn-lg" data-en="Request a services quote" data-fr="Demander un devis">Request a services quote</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+      <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let currentLanguage='en';
+    function switchLanguage(lang){
+      currentLanguage=lang;
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.querySelectorAll('.lang-en').forEach(el=>el.style.display=(lang==='en')?'':'none');
+      document.querySelectorAll('.lang-fr').forEach(el=>el.style.display=(lang==='fr')?'':'none');
+      document.documentElement.lang=lang;
+    }
+    document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Les Éditions du Schabel Canada</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-color:#1e3a8a; --secondary-color:#f59e0b; --accent-color:#dc2626; --text-dark:#374151; --text-light:#6b7280; }
+        *{transition:all .3s ease}
+        body{font-family:'Inter',sans-serif;color:var(--text-dark);line-height:1.7}
+        .font-display{font-family:'Playfair Display',serif}
+        .navbar{background:rgba(255,255,255,.95)!important;backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,.1)}
+        .navbar-brand{font-weight:700;color:var(--primary-color)!important}
+        .language-toggle{position:fixed;top:80px;right:20px;z-index:1000}
+        .language-toggle .btn{border-radius:25px;padding:8px 20px;border:2px solid var(--primary-color);color:var(--primary-color);background:#fff;margin:0 5px}
+        .language-toggle .btn.active{background:var(--primary-color);color:#fff}
+        .page-hero{background:linear-gradient(135deg,var(--primary-color),#1e40af);color:#fff;padding:5rem 0 4rem}
+        .prose{max-width:70ch;margin-left:auto;margin-right:auto;font-size:1.05rem;line-height:1.9}
+        .prose p{margin-bottom:1rem}
+        .prose ul{padding-left:1.2rem;margin-bottom:1.25rem}
+        .prose li{margin-bottom:.5rem}
+        section h2.font-display{position:relative;display:inline-block}
+        section h2.font-display::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:-12px;width:80px;height:3px;background:linear-gradient(90deg,var(--secondary-color),var(--primary-color));border-radius:2px}
+    </style>
+  </head>
+  <body>
+    <div class="language-toggle">
+      <button class="btn active" onclick="switchLanguage('en')" id="btn-en">EN</button>
+      <button class="btn" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+            <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-hero text-center">
+      <div class="container">
+        <h1 class="font-display mb-3" data-en="About Us" data-fr="À propos de nous">About Us</h1>
+        <p class="mb-0" data-en="Vision, identity, mission and scope" data-fr="Vision, identité, mission et champ d’action">Vision, identity, mission and scope</p>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="font-display text-primary-custom" data-en="Our Vision" data-fr="Notre vision">Our Vision</h2>
+        </div>
+        <div class="lang-en prose">
+          <p><strong>Amplifying voices. Connecting continents. Inspiring generations.</strong></p>
+          <p>At Les Éditions du Schabel Canada, we believe that a book is more than a physical object: it is a living force, a vessel of memory, and a driver of transformation.</p>
+          <ul>
+            <li><strong>A Witness of History</strong> – Preserves journeys, struggles, legacies, and knowledge.</li>
+            <li><strong>A Cry of Hope</strong> – Amplifies marginalized voices and turns silence into dignity.</li>
+            <li><strong>A Tool for Social Transformation</strong> – Challenges, questions, and enlightens.</li>
+            <li><strong>A Universal Forum for Dialogue</strong> – Bilingual approach takes stories beyond borders.</li>
+            <li><strong>An Invisible School</strong> – Nurtures critical thinking and opens paths to action.</li>
+            <li><strong>A Living Legacy</strong> – Publishing plants seeds that keep bearing fruit.</li>
+          </ul>
+        </div>
+        <div class="lang-fr prose" style="display:none;">
+          <p><strong>Amplifier les voix. Connecter les continents. Inspirer les générations.</strong></p>
+          <p>Aux Éditions du Schabel Canada, nous croyons que le livre dépasse sa matérialité : c’est une force vivante, un espace de mémoire et un moteur de transformation.</p>
+          <ul>
+            <li><strong>Un témoin d’histoire</strong> – Conserve parcours, luttes, héritages, savoirs.</li>
+            <li><strong>Un cri d’espérance</strong> – Amplifie les voix marginalisées en dignité.</li>
+            <li><strong>Un outil de transformation sociale</strong> – Interpelle, questionne et éclaire.</li>
+            <li><strong>Un espace de dialogue universel</strong> – Bilingue, au-delà des frontières.</li>
+            <li><strong>Une école invisible</strong> – Nourrit la pensée critique.</li>
+            <li><strong>Un héritage vivant</strong> – Des graines qui portent du fruit.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 bg-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="font-display text-primary-custom" data-en="Who We Are" data-fr="Qui Sommes-Nous">Who We Are</h2>
+        </div>
+        <div class="lang-en prose">
+          <p>Les Éditions du Schabel Canada is a bilingual publishing house (French & English) based in Ontario, Canada. We are the natural extension of a strategic partnership with Les Éditions du Schabel (Cameroon), building an editorial bridge between Africa, its diasporas, and the world.</p>
+          <p><strong>A House at the Crossroads of Cultures</strong><br>We aim to be: a space of memory, a citizen forum, and a cultural bridge linking Africa, Europe, and the Americas.</p>
+        </div>
+        <div class="lang-fr prose" style="display:none;">
+          <p>Les Éditions du Schabel Canada est une maison d’édition bilingue (FR/EN) en Ontario. Prolongement d’un partenariat stratégique avec Les Éditions du Schabel (Cameroun), nous bâtissons un pont éditorial entre l’Afrique, ses diasporas et le monde.</p>
+          <p><strong>Une maison au carrefour des cultures</strong><br>Un espace de mémoire, une tribune citoyenne et une passerelle culturelle entre l’Afrique, l’Europe et l’Amérique.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="font-display text-primary-custom" data-en="Mission & Scope" data-fr="Mission & Champ d’action">Mission & Scope</h2>
+        </div>
+        <div class="row"><div class="col-lg-10 mx-auto">
+          <div class="lang-en prose">
+            <ul>
+              <li>Publish stories that carry memory, resilience, and human dignity.</li>
+              <li>Give international visibility to African, diasporic, and Francophone voices.</li>
+              <li>Support authors from idea to global distribution with complete editorial care.</li>
+            </ul>
+            <h5 class="mt-3">Our Scope</h5>
+            <ul>
+              <li>Literary and scientific publishing.</li>
+              <li>International dissemination.</li>
+              <li>Showcasing academic and diasporic voices.</li>
+            </ul>
+          </div>
+          <div class="lang-fr prose" style="display:none;">
+            <ul>
+              <li>Publier des récits de mémoire, résilience et dignité humaine.</li>
+              <li>Donner une visibilité internationale aux voix africaines et diasporiques.</li>
+              <li>Accompagner les auteurs jusqu’à la diffusion mondiale.</li>
+            </ul>
+            <h5 class="mt-3">Notre champ d’action</h5>
+            <ul>
+              <li>Édition littéraire et scientifique.</li>
+              <li>Diffusion internationale.</li>
+              <li>Mise en valeur des voix académiques et diasporiques.</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="d-flex justify-content-between flex-wrap">
+          <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+          <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let currentLanguage = 'en';
+      function switchLanguage(lang){
+        currentLanguage = lang;
+        document.getElementById('btn-en').classList.toggle('active', lang==='en');
+        document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+        document.querySelectorAll('.lang-en').forEach(el=>el.style.display = (lang==='en')?'':'none');
+        document.querySelectorAll('.lang-fr').forEach(el=>el.style.display = (lang==='fr')?'':'none');
+        document.documentElement.lang = lang;
+      }
+      document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+    </script>
+  </body>
+</html>
+

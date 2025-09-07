@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Publish – Les Éditions du Schabel Canada</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary-color:#1e3a8a;--secondary-color:#f59e0b;--text-dark:#374151;--text-light:#6b7280}
+    body{font-family:'Inter',sans-serif;color:var(--text-dark)}
+    .font-display{font-family:'Playfair Display',serif}
+    .navbar{background:rgba(255,255,255,.95)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .prose{max-width:70ch;margin:0 auto}
+    .prose ul{padding-left:1.2rem}
+  </style>
+</head>
+<body>
+  <div class="language-toggle position-fixed" style="top:80px;right:20px;z-index:1000;">
+    <button class="btn btn-sm btn-outline-primary me-2" onclick="switchLanguage('en')" id="btn-en">EN</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="font-display mb-3" data-en="Why Publish with Us?" data-fr="Pourquoi publier avec nous ?">Why Publish with Us?</h1>
+      <p class="mb-0" data-en="Benefits and guarantees for authors" data-fr="Bénéfices et garanties pour les auteurs">Benefits and guarantees for authors</p>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="prose lang-en">
+        <ul>
+          <li>Complete & personalized support – from idea to sale</li>
+          <li>Bilingual excellence (FR/EN) – cross-border reach</li>
+          <li>Structured global dissemination – Amazon, Kobo, Google Books, libraries, bookstores</li>
+          <li>African roots & universal reach</li>
+          <li>Editorial & academic excellence</li>
+          <li>Strong partner network</li>
+        </ul>
+      </div>
+      <div class="prose lang-fr" style="display:none;">
+        <ul>
+          <li>Un accompagnement complet et personnalisé – de l’idée à la vente</li>
+          <li>Une exigence bilingue (FR/EN) – des récits qui franchissent les frontières</li>
+          <li>Une diffusion mondiale – Amazon, Kobo, Google Books, bibliothèques, librairies</li>
+          <li>Un ancrage africain et une ouverture universelle</li>
+          <li>Une excellence éditoriale et académique</li>
+          <li>Un réseau de partenaires solides</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+      <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let currentLanguage='en';
+    function switchLanguage(lang){
+      currentLanguage=lang;
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.querySelectorAll('.lang-en').forEach(el=>el.style.display=(lang==='en')?'':'none');
+      document.querySelectorAll('.lang-fr').forEach(el=>el.style.display=(lang==='fr')?'':'none');
+      document.documentElement.lang=lang;
+    }
+    document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books – Les Éditions du Schabel Canada</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary-color:#1e3a8a;--secondary-color:#f59e0b;--accent-color:#dc2626;--text-dark:#374151;--text-light:#6b7280}
+    body{font-family:'Inter',sans-serif;color:var(--text-dark)}
+    .font-display{font-family:'Playfair Display',serif}
+    .navbar{background:rgba(255,255,255,.95)!important;box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .book-card{background:#fff;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;height:100%}
+    .book-cover{height:260px;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;text-align:center;padding:20px}
+    .status-badge{position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:20px;font-size:.8rem;font-weight:600;color:#fff}
+    .status-published{background:#10b981}.status-upcoming{background:var(--secondary-color)}.status-preorder{background:var(--accent-color)}
+  </style>
+</head>
+<body>
+  <div class="language-toggle position-fixed" style="top:80px;right:20px;z-index:1000;">
+    <button class="btn btn-sm btn-outline-primary me-2" onclick="switchLanguage('en')" id="btn-en">EN</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="switchLanguage('fr')" id="btn-fr">FR</button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand font-display" href="index.html">Les Éditions du Schabel Canada</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="font-display mb-3" data-en="Our Books" data-fr="Nos Livres">Our Books</h1>
+      <p class="mb-0" data-en="Stories that carry memory, resilience, and human dignity" data-fr="Des histoires qui portent la mémoire, la résilience et la dignité humaine">Stories that carry memory, resilience, and human dignity</p>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Book cards pulled from homepage list -->
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="Cameroun 2025: Letter from Toronto" data-fr="Cameroun 2025 : Lettre de Toronto">Cameroun 2025: Letter from Toronto</span></div>
+            <span class="status-badge status-published" data-en="Published" data-fr="Publié">Published</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="Cameroun 2025: Letter from Toronto" data-fr="Cameroun 2025 : Lettre de Toronto">Cameroun 2025: Letter from Toronto</h5>
+              <p class="text-muted mb-3" data-en="A cry of alarm and call for civic awakening on the eve of the 2025 election." data-fr="Un cri d'alerte et un appel au sursaut citoyen à la veille de l'élection 2025.">A cry of alarm and call for civic awakening on the eve of the 2025 election.</p>
+              <a href="#" class="btn btn-primary btn-sm" data-en="Order Now" data-fr="Commander">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="The Mutilated Man" data-fr="L'Homme Mutilé">The Mutilated Man</span></div>
+            <span class="status-badge status-upcoming" data-en="Coming 2025" data-fr="À venir 2025">Coming 2025</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="The Mutilated Man - Désiré Nyela" data-fr="L'Homme Mutilé - Désiré Nyela">The Mutilated Man - Désiré Nyela</h5>
+              <p class="text-muted mb-3" data-en="A powerful essay on the legacy of colonialism and its lingering effects in contemporary African societies." data-fr="Un essai profond et engagé qui interroge l’héritage du colonialisme et ses prolongements dans les sociétés africaines contemporaines.">A powerful essay on the legacy of colonialism and its lingering effects in contemporary African societies.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" data-en="Pre-order" data-fr="Précommander">Pre-order</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="The Biya Regime" data-fr="Le Régime Biya">The Biya Regime</span></div>
+            <span class="status-badge status-preorder" data-en="In Progress" data-fr="En cours">In Progress</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="The Biya Regime - Haman Mana" data-fr="Le Régime Biya - Haman Mana">The Biya Regime - Haman Mana</h5>
+              <p class="text-muted mb-3" data-en="Unflinching account of four decades of authoritarian rule in Cameroon. Translated by Eric Keunne & Zih James Kum." data-fr="Bilan sans concession de plus de quatre décennies de pouvoir autoritaire au Cameroun. Traduit par Eric Keunne & Zih James Kum.">Unflinching account of four decades of authoritarian rule in Cameroon. Translated by Eric Keunne & Zih James Kum.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" data-en="Order / Pre-order" data-fr="Commander / Précommander">Order / Pre-order</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="Ink, Paper, Impact… 35 Years of Journalism in Cameroon" data-fr="Encre, Papier, Impact… 35 ans de journalisme au Cameroun">Ink, Paper, Impact… 35 Years of Journalism in Cameroon</span></div>
+            <span class="status-badge status-upcoming" data-en="Ready for publication" data-fr="Prêt pour publication">Ready for publication</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="Ink, Paper, Impact… – Haman Mana" data-fr="Encre, Papier, Impact… – Haman Mana">Ink, Paper, Impact… – Haman Mana</h5>
+              <p class="text-muted mb-3" data-en="A unique testimony on 35 years of journalism. Translated by Eric Keunne & Zih James Kum." data-fr="Un témoignage unique sur 35 ans de journalisme. Traduit par Eric Keunne & Zih James Kum.">A unique testimony on 35 years of journalism. Translated by Eric Keunne & Zih James Kum.</p>
+              <a href="#" class="btn btn-primary btn-sm" data-en="Order Now" data-fr="Commander ici">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="Too Long in the Dark" data-fr="Trop longtemps dans l’ombre">Too Long in the Dark</span></div>
+            <span class="status-badge status-preorder" data-en="In preparation" data-fr="En préparation">In preparation</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="Too Long in the Dark – Elvira Nguelewou" data-fr="Trop longtemps dans l’ombre – Elvira Nguelewou">Too Long in the Dark – Elvira Nguelewou</h5>
+              <p class="text-muted mb-3" data-en="Autobiographical account exploring systemic racism in Canadian healthcare." data-fr="Récit autobiographique explorant le racisme systémique dans les soins de santé au Canada.">Autobiographical account exploring systemic racism in Canadian healthcare.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" data-en="Pre-order" data-fr="Précommander">Pre-order</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="A Cry Without a Voice" data-fr="Un Cri Sans Voix">A Cry Without a Voice</span></div>
+            <span class="status-badge status-preorder" data-en="In preparation" data-fr="En préparation">In preparation</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="A Cry Without a Voice – Janvier Nzeutchap" data-fr="Un Cri Sans Voix – Janvier Nzeutchap">A Cry Without a Voice – Janvier Nzeutchap</h5>
+              <p class="text-muted mb-3" data-en="Testimony at the crossroads of science and African spirituality; advocacy for the invisible sick." data-fr="Témoignage à la croisée de la science et de la spiritualité africaine ; plaidoyer pour la dignité des malades invisibles.">Testimony at the crossroads of science and African spirituality; advocacy for the invisible sick.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" data-en="Pre-order" data-fr="Précommander">Pre-order</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="book-card position-relative">
+            <div class="book-cover"><span data-en="Developing the Mindset of a Successful Entrepreneur" data-fr="Développer le mental d’un entrepreneur à succès">Developing the Mindset of a Successful Entrepreneur</span></div>
+            <span class="status-badge status-preorder" data-en="In preparation" data-fr="En préparation">In preparation</span>
+            <div class="p-4">
+              <h5 class="mb-3" data-en="Developing the Mindset of a Successful Entrepreneur – Joël Epoh" data-fr="Développer le mental d’un entrepreneur à succès – Joël Epoh">Developing the Mindset of a Successful Entrepreneur – Joël Epoh</h5>
+              <p class="text-muted mb-3" data-en="A practical, inspiring guide with clear advice and real examples." data-fr="Un manuel pratique et motivant avec des conseils clairs et des exemples concrets.">A practical, inspiring guide with clear advice and real examples.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" data-en="Pre-order" data-fr="Précommander">Pre-order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p class="mb-0">&copy; 2025 Les Éditions du Schabel Canada</p>
+      <p class="mb-0" data-en="Amplifying voices. Connecting continents. Inspiring generations." data-fr="Amplifier les voix. Connecter les continents. Inspirer les générations.">Amplifying voices. Connecting continents. Inspiring generations.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let currentLanguage='en';
+    function switchLanguage(lang){
+      currentLanguage=lang;
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.querySelectorAll('[data-en],[data-fr]').forEach(el=>{
+        const key= lang==='en'? el.getAttribute('data-en'): el.getAttribute('data-fr');
+        if(key) el.textContent = key;
+      });
+      document.documentElement.lang=lang;
+    }
+    document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));
+  </script>
+</body>
+</html>
+
