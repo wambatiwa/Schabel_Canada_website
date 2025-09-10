@@ -20,89 +20,110 @@
             --text-dark: #374151;
             --text-light: #6b7280;
         }
-        
-        * {
-            transition: all 0.3s ease;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        /* Readable long-form typography */
-        .prose {
-            max-width: 70ch;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-        }
+        * { transition: all 0.3s ease; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .prose { max-width: 70ch; margin-left: auto; margin-right: auto; font-size: 1.05rem; line-height: 1.9; color: var(--text-dark); }
         .prose p { margin-bottom: 1rem; }
         .prose ul { padding-left: 1.2rem; margin-bottom: 1.25rem; }
         .prose li { margin-bottom: 0.5rem; }
         .prose strong { color: #111827; }
-        
-        /* Section heading accent */
-        section h2.font-display {
-            position: relative;
-            display: inline-block;
-        }
-        section h2.font-display::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -12px;
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-            border-radius: 2px;
-        }
-        
-                /* Polished cards */
-                .book-card, .service-card, .partner-card { border: 1px solid rgba(0,0,0,0.05); }
-                .book-card .p-4 h5 { font-weight: 700; }
-                .book-card .p-4 p { color: var(--text-light); }
-
-                /* Match navbar font size to about.html */
-                        .navbar-nav .nav-link {
-                            font-size: 1rem;
-                        }
-                        .navbar-nav .nav-link.active, .navbar-nav .nav-link[aria-current="page"] {
-                            color: #1e3a8a !important;
-                            font-weight: 600;
-                        }
-        
-        /* Status badge tweaks */
+        section h2.font-display { position: relative; display: inline-block; }
+        section h2.font-display::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -12px; width: 80px; height: 3px; background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); border-radius: 2px; }
+        .book-card, .service-card, .partner-card { border: 1px solid rgba(0,0,0,0.05); }
+        .book-card .p-4 h5 { font-weight: 700; }
+        .book-card .p-4 p { color: var(--text-light); }
+        .navbar-nav .nav-link { font-size: 1rem; }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link[aria-current="page"] { color: #1e3a8a !important; font-weight: 600; }
         .status-badge { box-shadow: 0 6px 18px rgba(0,0,0,0.08); letter-spacing: 0.3px; }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
+        .hero { background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%); color: white; min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
         .hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100%;
+            height: 100%;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>') repeat;
             opacity: 0.1;
+            pointer-events: none;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 1200px) {
+            .hero { min-height: 60vh; padding: 2rem 0; }
+            .prose { font-size: 1rem; }
+        }
+        @media (max-width: 992px) {
+            .navbar-nav .nav-link { font-size: 0.95rem; }
+            .hero { flex-direction: column; text-align: center; }
+            .book-card, .service-card, .partner-card { margin-bottom: 1.5rem; }
+        }
+        @media (max-width: 768px) {
+            .container { padding-left: 10px; padding-right: 10px; }
+            .hero { min-height: 40vh; padding: 1rem 0; }
+            .navbar-brand img { height: 32px !important; margin-right: 8px !important; }
+            .navbar-nav .nav-link { font-size: 0.9rem; padding: 0.5rem 0.7rem; }
+            .prose { font-size: 0.97rem; }
+        }
+        @media (max-width: 576px) {
+            .navbar { padding: 0.5rem 0; }
+            .navbar-brand { font-size: 1rem; }
+            .navbar-nav .nav-link { font-size: 0.85rem; padding: 0.4rem 0.5rem; }
+            .hero { min-height: 30vh; padding: 0.5rem 0; }
+            .book-card, .service-card, .partner-card { padding: 0.5rem; }
+            .prose { font-size: 0.93rem; }
+            .hero {
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 24px;
+            }
+            .language-toggle {
+                top: 24px;
+                right: 5px;
+                margin-bottom: 12px;
+            }
+            .language-toggle .btn {
+                margin-bottom: 4px;
+            }
+        }
+        /* Make images fluid */
+        img, .book-cover img, .service-card img, .partner-card img { max-width: 100%; height: auto; display: block; }
+        /* Fix language toggle for mobile */
+        .language-toggle {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .language-toggle .btn {
+            border-radius: 25px;
+            padding: 8px 20px;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: #fff;
+            margin: 0 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(30,58,138,0.08);
+        }
+        .language-toggle .btn.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+        @media (max-width: 576px) {
+            .language-toggle {
+                top: 55px;
+                right: 5px;
+            }
+            .language-toggle .btn {
+                padding: 6px 12px;
+                font-size: 1.1rem;
+                margin: 0 2px;
+                letter-spacing: 0.5px;
+                box-shadow: 0 2px 8px rgba(30,58,138,0.12);
+            }
         }
         
         .hero-content {
@@ -142,15 +163,19 @@
         .language-toggle .btn {
             border-radius: 25px;
             padding: 8px 20px;
-            border: 2px solid white;
-            color: white;
-            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: #fff;
             margin: 0 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(30,58,138,0.08);
         }
         
         .language-toggle .btn.active {
-            background: white;
-            color: var(--primary-color);
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
         }
         
         /* Navigation */
@@ -724,7 +749,7 @@
                 "The Biya Regime": "The Biya Regime",
                 "In Progress": "In Progress",
                 "The Biya Regime - Haman Mana": "The Biya Regime - Haman Mana",
-                "Chronicle of four decades of authoritarian rule in Cameroon.": "Chronicle of four decades of authoritarian rule in Cameroon.",
+                "Chronicle of four decades of authoritarian rule in Cameroon." : "Chronicle of four decades of authoritarian rule in Cameroon.",
                 
                 // Services Section
                 "Our Editorial Services": "Our Editorial Services",
@@ -801,7 +826,7 @@
                 "The Biya Regime": "Le Régime Biya",
                 "In Progress": "En cours",
                 "The Biya Regime - Haman Mana": "Le Régime Biya - Haman Mana",
-                "Chronicle of four decades of authoritarian rule in Cameroon.": "Chronique de quatre décennies de pouvoir autoritaire au Cameroun.",
+                "Chronicle of four decades of authoritarian rule in Cameroon." : "Chronique de quatre décennies de pouvoir autoritaire au Cameroun.",
                 
                 // Services Section
                 "Our Editorial Services": "Nos Services Éditoriaux",
@@ -860,12 +885,6 @@
                     element.textContent = key;
                 }
             });
-            // Toggle bilingual long-form blocks
-            document.querySelectorAll('.lang-en').forEach(el => { el.style.display = (lang === 'en') ? '' : 'none'; });
-            document.querySelectorAll('.lang-fr').forEach(el => { el.style.display = (lang === 'fr') ? '' : 'none'; });
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
         }
 
         // Smooth scrolling for navigation links
