@@ -29,12 +29,13 @@
       </a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a></li>
           <li class="nav-item"><a class="nav-link" href="books.html" data-en="Books" data-fr="Livres">Books</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html" data-en="Services" data-fr="Services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="partnerships.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a></li>
           <li class="nav-item"><a class="nav-link" href="why-publish.html" data-en="Why Publish" data-fr="Pourquoi publier">Why Publish</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="contact.html" aria-current="page" style="text-decoration:underline;" data-en="Contact" data-fr="Contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -46,6 +47,7 @@
             <div class="col-lg-8 text-center">
                 <h2 class="font-display fw-bold mb-4" data-translate="contact-title">Contact & Submission</h2>
                 <p class="lead" data-translate="contact-subtitle">Ready to publish with Les Éditions du Schabel Canada? We welcome your projects with seriousness, professionalism, and passion. Submit a manuscript or get in touch with us.</p>
+                <p class="mb-3"><strong>Email:</strong> <a href="mailto:schabelcanada@ekglobalsolutions.com">schabelcanada@ekglobalsolutions.com</a></p>
                 
                 <form id="contact-form" class="mt-5">
                     <div class="row g-3">
@@ -94,6 +96,8 @@
         const key= lang==='en'? el.getAttribute('data-en'): el.getAttribute('data-fr');
         if(key) el.textContent = key;
       });
+      document.querySelectorAll('.lang-en').forEach(el=>el.style.display=(lang==='en')?'':'none');
+      document.querySelectorAll('.lang-fr').forEach(el=>el.style.display=(lang==='fr')?'':'none');
       document.documentElement.lang=lang;
     }
     document.addEventListener('DOMContentLoaded',()=>switchLanguage(currentLanguage));

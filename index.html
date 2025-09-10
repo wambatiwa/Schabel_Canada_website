@@ -66,10 +66,19 @@
             border-radius: 2px;
         }
         
-        /* Polished cards */
-        .book-card, .service-card, .partner-card { border: 1px solid rgba(0,0,0,0.05); }
-        .book-card .p-4 h5 { font-weight: 700; }
-        .book-card .p-4 p { color: var(--text-light); }
+                /* Polished cards */
+                .book-card, .service-card, .partner-card { border: 1px solid rgba(0,0,0,0.05); }
+                .book-card .p-4 h5 { font-weight: 700; }
+                .book-card .p-4 p { color: var(--text-light); }
+
+                /* Match navbar font size to about.html */
+                        .navbar-nav .nav-link {
+                            font-size: 1rem;
+                        }
+                        .navbar-nav .nav-link.active, .navbar-nav .nav-link[aria-current="page"] {
+                            color: #1e3a8a !important;
+                            font-weight: 600;
+                        }
         
         /* Status badge tweaks */
         .status-badge { box-shadow: 0 6px 18px rgba(0,0,0,0.08); letter-spacing: 0.3px; }
@@ -341,6 +350,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link active" href="index.html" data-en="Home" data-fr="Accueil" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html" data-en="About" data-fr="À Propos">About</a>
                     </li>
                     <li class="nav-item">
@@ -359,7 +371,7 @@
                         <a class="nav-link" href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary-custom text-white px-3 ms-2" href="contact.html" data-en="Submit Manuscript" data-fr="Soumettre un Manuscrit">Submit Manuscript</a>
+                        <!-- Submit Manuscript button removed -->
                     </li>
                 </ul>
             </div>
@@ -395,7 +407,7 @@
                 <h2 class="font-display text-primary-custom mb-2" data-en="Stay in the loop" data-fr="Restez informé">Stay in the loop</h2>
                 <p class="lead" data-en="Receive updates on new books and events" data-fr="Recevez des nouvelles sur nos livres et événements">Receive updates on new books and events</p>
             </div>
-            <form class="row g-2 justify-content-center" onsubmit="event.preventDefault(); window.location.href='mailto:schaabelcanada@ekglobalsolutions.com?subject=Newsletter signup&body=Please add me to the newsletter: '+document.getElementById('nl-email').value;">
+            <form class="row g-2 justify-content-center" onsubmit="event.preventDefault(); window.location.href='mailto:schabelcanada@ekglobalsolutions.com?subject=Newsletter signup&body=Please add me to the newsletter: '+document.getElementById('nl-email').value;">
                 <div class="col-sm-8 col-md-6 col-lg-4">
                     <input id="nl-email" type="email" class="form-control form-control-lg" placeholder="email@example.com" required>
                 </div>
@@ -454,10 +466,10 @@
                 <!-- Book 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="book-card position-relative">
-                        <div class="book-cover">
-                            <span data-en="Cameroun 2025: Letter from Toronto" data-fr="Cameroun 2025 : Lettre de Toronto">Cameroun 2025: Letter from Toronto</span>
+                        <div class="book-cover p-0" style="height:260px;display:flex;align-items:center;justify-content:center;background:none;">
+                            <img src="images/img1.jpg" alt="Cameroun 2025: Letter from Toronto" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
                         </div>
-                        <span class="status-badge status-published" data-en="Published" data-fr="Publié">Published</span>
+                        <span class="status-badge status-published" data-en="Published 15 September 2025" data-fr="Publié 15 septembre 2025">Published 15 September 2025</span>
                         <div class="p-4">
                             <h5 class="mb-3" data-en="Cameroun 2025: Letter from Toronto" data-fr="Cameroun 2025 : Lettre de Toronto">Cameroun 2025: Letter from Toronto</h5>
                             <p class="text-muted mb-3" data-en="A cry of alarm and call for civic awakening on the eve of the 2025 election." data-fr="Un cri d'alerte et un appel au sursaut citoyen à la veille de l'élection 2025.">A cry of alarm and call for civic awakening on the eve of the 2025 election.</p>
@@ -468,8 +480,8 @@
                 <!-- Book 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="book-card position-relative">
-                        <div class="book-cover">
-                            <span data-en="The Mutilated Man" data-fr="L'Homme Mutilé">The Mutilated Man</span>
+                        <div class="book-cover p-0" style="height:260px;display:flex;align-items:center;justify-content:center;background:none;">
+                            <img src="images/img2.jpg" alt="The Mutilated Man" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
                         </div>
                         <span class="status-badge status-upcoming" data-en="Coming 2025" data-fr="À venir 2025">Coming 2025</span>
                         <div class="p-4">
@@ -482,8 +494,8 @@
                 <!-- Book 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="book-card position-relative">
-                        <div class="book-cover">
-                            <span data-en="The Biya Regime" data-fr="Le Régime Biya">The Biya Regime</span>
+                        <div class="book-cover p-0" style="height:260px;display:flex;align-items:center;justify-content:center;background:none;">
+                            <img src="images/img3.jpg" alt="The Biya Regime" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
                         </div>
                         <span class="status-badge status-preorder" data-en="In Progress" data-fr="En cours">In Progress</span>
                         <div class="p-4">
@@ -613,7 +625,7 @@
                                     <i class="fas fa-envelope text-primary-custom mb-3" style="font-size: 2rem;"></i>
                                     <h5 data-en="General Inquiries" data-fr="Demandes Générales">General Inquiries</h5>
                                     <p data-en="Information and questions" data-fr="Informations et questions">Information and questions</p>
-                                    <a href="mailto:schaabelcanada@ekglobalsolutions.com" class="btn btn-outline-primary-custom">schaabelcanada@ekglobalsolutions.com</a>
+                                    <a href="mailto:schabelcanada@ekglobalsolutions.com" class="btn btn-outline-primary-custom">schabelcanada@ekglobalsolutions.com</a>
                                 </div>
                             </div>
                         </div>
@@ -623,7 +635,7 @@
                                     <i class="fas fa-file-signature text-primary-custom mb-3" style="font-size: 2rem;"></i>
                                     <h5 data-en="Manuscript Submissions" data-fr="Soumissions de Manuscrits">Manuscript Submissions</h5>
                                     <p data-en="For manuscript submissions only" data-fr="Pour soumissions de manuscrits uniquement">For manuscript submissions only</p>
-                                    <a href="mailto:manuscritsschabel@ekglobalsolutions.com" class="btn btn-primary-custom">manuscritsschabel@ekglobalsolutions.com</a>
+                                    <a href="mailto:schabelcanada@ekglobalsolutions.com" class="btn btn-primary-custom">schabelcanada@ekglobalsolutions.com</a>
                                 </div>
                             </div>
                         </div>
@@ -924,9 +936,9 @@
         // Contact form functionality (you can enhance this)
         function handleFormSubmit(type) {
             if (type === 'manuscript') {
-                window.location.href = 'mailto:manuscritsschabel@ekglobalsolutions.com?subject=Manuscript Submission&body=Hello, I would like to submit my manuscript for consideration...';
+                window.location.href = 'mailto:schabelcanada@ekglobalsolutions.com?subject=Manuscript Submission&body=Hello, I would like to submit my manuscript for consideration...';
             } else if (type === 'general') {
-                window.location.href = 'mailto:schaabelcanada@ekglobalsolutions.com?subject=General Inquiry&body=Hello, I have a question about...';
+                window.location.href = 'mailto:schabelcanada@ekglobalsolutions.com?subject=General Inquiry&body=Hello, I have a question about...';
             }
         }
 
