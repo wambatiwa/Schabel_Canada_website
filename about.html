@@ -24,6 +24,26 @@
         .prose li{margin-bottom:.5rem}
         section h2.font-display{position:relative;display:inline-block}
         section h2.font-display::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:-12px;width:80px;height:3px;background:linear-gradient(90deg,var(--secondary-color),var(--primary-color));border-radius:2px}
+
+        @media (max-width: 576px) {
+            .hero {
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 24px;
+            }
+            .language-toggle {
+                top: 24px !important;
+                right: 5px !important;
+                margin-bottom: 12px !important;
+                display: flex !important;
+                z-index: 2000 !important;
+            }
+            .language-toggle .btn {
+                margin-bottom: 4px;
+                font-size: 1.1rem;
+                padding: 8px 16px;
+            }
+        }
     </style>
   </head>
   <body>

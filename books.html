@@ -16,6 +16,25 @@
     .book-cover{height:260px;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;text-align:center;padding:20px}
     .status-badge{position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:20px;font-size:.8rem;font-weight:600;color:#fff}
     .status-published{background:#10b981}.status-upcoming{background:var(--secondary-color)}.status-preorder{background:var(--accent-color)}
+    @media (max-width: 576px) {
+      .hero {
+          padding-left: 16px;
+          padding-right: 16px;
+          padding-top: 24px;
+      }
+      .language-toggle {
+          top: 24px !important;
+          right: 5px !important;
+          margin-bottom: 12px !important;
+          display: flex !important;
+          z-index: 2000 !important;
+      }
+      .language-toggle .btn {
+          margin-bottom: 4px;
+          font-size: 1.1rem;
+          padding: 8px 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -57,7 +76,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="book-card position-relative">
             <div class="book-cover p-0" style="height:260px;display:flex;align-items:center;justify-content:center;background:none;">
-              <img src="images/img1.jpg" alt="Cameroun 2025: Letter from Toronto" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
+              <img src="images/img2.jpg" alt="Cameroun 2025: Letter from Toronto" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
             </div>
             <span class="status-badge status-published" data-en="Published" data-fr="Publié">Published</span>
             <div class="p-4">
@@ -70,9 +89,9 @@
         <div class="col-lg-4 col-md-6">
           <div class="book-card position-relative">
             <div class="book-cover p-0" style="height:260px;display:flex;align-items:center;justify-content:center;background:none;">
-              <img src="images/img2.jpg" alt="The Mutilated Man" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
+              <img src="images/img1.jpg" alt="The Mutilated Man" style="max-height:100%;max-width:100%;object-fit:cover;border-radius:12px;">
             </div>
-            <span class="status-badge status-upcoming" data-en="Coming 2025" data-fr="À venir 2025">Coming 2025</span>
+            <span class="status-badge status-upcoming" data-en="Coming Septembre 15 2025" data-fr="À venir le 15 septembre 2025">Coming 2025</span>
             <div class="p-4">
               <h5 class="mb-3" data-en="The Mutilated Man - Désiré Nyela" data-fr="L'Homme Mutilé - Désiré Nyela">The Mutilated Man - Désiré Nyela</h5>
               <p class="text-muted mb-3" data-en="A powerful essay on the legacy of colonialism and its lingering effects in contemporary African societies." data-fr="Un essai profond et engagé qui interroge l’héritage du colonialisme et ses prolongements dans les sociétés africaines contemporaines.">A powerful essay on the legacy of colonialism and its lingering effects in contemporary African societies.</p>
