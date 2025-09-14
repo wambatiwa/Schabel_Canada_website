@@ -998,75 +998,7 @@ Ne manquez rien des nouveautés de Schabel Canada : parutions, lancements, renco
                   Chronicle of four decades of authoritarian rule in Cameroon.
                 </p>
                 <div class="dropdown">
-                  <button
-                    class="btn btn-outline-primary-custom dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    data-en="Pre-order"
-                    data-fr="Précommander"
-                  >
-                    Pre-order
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.fr/dp/2982376253
-"
-                        target="_blank"
-                        >France</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.com/dp/2982376253"
-                        target="_blank"
-                        >USA</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.ca/dp/2982376253"
-                        target="_blank"
-                        >Canada</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.de/dp/2982376253"
-                        target="_blank"
-                        >Germany</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.it/dp/2982376253"
-                        target="_blank"
-                        >Italy</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.es/dp/2982376253"
-                        target="_blank"
-                        >Spain</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="https://www.amazon.co.uk/dp/2982376253"
-                        target="_blank"
-                        >Britain</a
-                      >
-                    </li>
-                  </ul>
+                        <button class="btn btn-outline-primary-custom" data-bs-toggle="modal" data-bs-target="#preorderModal" data-en="Pre-order" data-fr="Précommander">Pre-order</button>
                 </div>
               </div>
             </div>
@@ -1082,7 +1014,31 @@ Ne manquez rien des nouveautés de Schabel Canada : parutions, lancements, renco
           >
         </div>
       </div>
-    </section>
+  </section>
+
+<!-- Modal for Book 3 Pre-order Links (placed outside book card for proper event handling) -->
+<div class="modal fade" id="preorderModal" tabindex="-1" aria-labelledby="preorderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:25px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preorderModalLabel">Pre-order Links</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled mb-0">
+          <li><a href="https://www.amazon.fr/dp/2982376253" class="btn btn-primary btn-sm w-100 mb-2" target="_blank">France</a></li>
+          <li><a href="https://www.amazon.com/dp/2982376253" class="btn btn-secondary btn-sm w-100 mb-2" target="_blank">USA</a></li>
+          <li><a href="https://www.amazon.ca/dp/2982376253" class="btn btn-info btn-sm w-100 mb-2" target="_blank">Canada</a></li>
+          <li><a href="https://www.amazon.de/dp/2982376253" class="btn btn-outline-primary btn-sm w-100 mb-2" target="_blank">Germany</a></li>
+          <li><a href="https://www.amazon.it/dp/2982376253" class="btn btn-outline-primary btn-sm w-100 mb-2" target="_blank">Italy</a></li>
+          <li><a href="https://www.amazon.es/dp/2982376253" class="btn btn-outline-primary btn-sm w-100 mb-2" target="_blank">Spain</a></li>
+          <li><a href="https://www.amazon.co.uk/dp/2982376253" class="btn btn-outline-primary btn-sm w-100 mb-2" target="_blank">Britain</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
 
     <!-- Services Section -->
     <section id="services" class="py-5 bg-light-custom">
